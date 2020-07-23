@@ -1,14 +1,12 @@
 <?php
 
-namespace app;
+require  "../vendor/autoload.php";
 
-require __DIR__ . "/../vendor/autoload.php";
-
-$color1 = new color(150,150,150);
-$color2 = new color(10,50,200);
-$color3 = color::rand();
+$color1 = new app\Color(150,150,150);
+$color2 = new app\Color(10,50,200);
+$color3 = app\Color::rand();
 $mixed = $color1->mix($color2);
-$color4 = color::rand();
+$color4 = app\Color::rand();
 $mixed1 = $color4->mix($color3);
 
 ?>
